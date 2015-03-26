@@ -1,13 +1,15 @@
-<html>
+<html ng-app="SowaHome">
   <head>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/config/routing.js"></script>
     <title>Sample Node.js Website</title>
   </head>
   <body>
-    <p>This is the home page for you Node.js website.</p>
-    trolololo
-    trol
+    <a href="#/partial1">Partial1</a>
+    <a href="#/partial2">Partial2</a>
 
+    <div ng-view></div>
   </body>
 </html>
