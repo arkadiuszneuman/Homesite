@@ -1,0 +1,16 @@
+#welcome {
+	background: -webkit-linear-gradient(left bottom, red, blue); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(top right, red, blue); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(top right, red, blue); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to top right, red, blue); /* Standard syntax */
+
+  	width: 100%;
+  	height: 100%;
+}
+
+#info {
+background-color: red;
+
+	width: 100%;
+	height: 100%;
+}
