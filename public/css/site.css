@@ -1,0 +1,22 @@
+#welcome {
+  	/*background: linear-gradient(to top right, #B7FFEF, #D6FF9C);*/
+	background-image: url('/images/kod.png');
+	background-position: 50% 0;
+	/*background-size: 100%;*/
+	background-repeat: no-repeat;
+  	width: 100%;
+  	height: 100%;
+}
+
+#info {
+	background-color: #DA6565;
+
+	width: 100%;
+	height: 100%;
+}
+
+#codeImage {
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
