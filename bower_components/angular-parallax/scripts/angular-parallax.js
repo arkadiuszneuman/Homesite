@@ -37,9 +37,11 @@ angular.module('angular-parallax', [
     },
     link: function($scope, elem, attrs) {
       var setPosition = function () {
-        var calcValY = (elem.prop('offsetTop') - $window.pageYOffset) * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
-        // horizontal positioning
-        elem.css('background-position', "0% " + calcValY + "px");
+        if ($window.innerWidth > 768) {
+          var calcValY = (elem.prop('offsetTop') - $window.pageYOffset) * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
+          // horizontal positioning
+          elem.css('background-position', "0px " + calcValY + "px");
+        }
       };
 
       // set our initial position - fixes webkit background render bug
