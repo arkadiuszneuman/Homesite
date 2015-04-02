@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" ng-app="SowaHome">
 
 <head>
 
@@ -24,6 +24,13 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type='text/javascript' src='bower_components/angular-parallax/scripts/angular-parallax.js'></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/config/routing.js"></script>
+    <script src="/js/directives/directives.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -46,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Arkadiusz Neuman Homesite</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,7 +85,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header parallax-background parallax-ratio="-0.7">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading">Miło mi Cię poznać</div>
