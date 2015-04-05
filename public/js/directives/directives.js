@@ -4,7 +4,7 @@ app.directive('centerV', ['$window', function($window){
 	var resize = function() {
 		elem.css('margin-top', ($window.innerHeight - elem[0].offsetHeight) / 2);
 	}
-		
+	
 	angular.element($window).on('resize', resize);
 
 	return {
@@ -28,3 +28,9 @@ app.directive('centerV', ['$window', function($window){
 		}
 	};
 }]);
+
+app.directive('socialButtons',  function(){
+	return {
+		templateUrl: '/html/partial/socialButtons.html',
+	};
+});
