@@ -421,9 +421,24 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
     #technologies .portfolio-item {
-        margin: 0 0 30px;
+        margin: 0 0 90px;
+        height: 100px;
+    }
+}
+
+@media(min-width:992px) {
+    #technologies .portfolio-item {
+        margin: 0 0 75px;
+        height: 100px;
+    }
+}
+
+@media(min-width:1200px) {
+    #technologies .portfolio-item {
+        margin: 0 0 95px;
+        height: 100px;
     }
 }
 

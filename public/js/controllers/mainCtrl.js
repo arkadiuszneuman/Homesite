@@ -2,60 +2,62 @@ app.controller('mainCtrl', ['$scope', '$timeout', function($scope, $timeout){
 	$scope.year = new Date().getFullYear();
 	$scope.introTextShowed = true;
 
+	var imgPath = "/img/technologies/";
+
 	$scope.technologies = [
 		{ 
-			name: "Microsoft .NET Framework",
+			name: ".NET Framework",
 			desc: "",
-			img: "http://upload.wikimedia.org/wikipedia/en/0/0d/Microsoft_.NET_Framework_v4.5_logo.png",
+			img: imgPath + "netframework.png",
 			url: "http://pl.wikipedia.org/wiki/.NET_Framework",
 		},
 		{ 
 			name: "ASP.NET MVC",
 			desc: "",
-			img: "http://blog.seekdotnet.com/wp-content/uploads/2011/09/logo-asp.net-mvc-285.gif",
+			img: imgPath + "asp.png",
 			url: "http://www.asp.net/mvc",
 		}
 		,
 		{ 
 			name: "NodeJS",
 			desc: "",
-			img: "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2000px-Node.js_logo.svg.png",
+			img: imgPath + "node.png",
 			url: "https://nodejs.org/",
 		},
 		{ 
 			name: "AngularJS",
 			desc: "",
-			img: "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/695px-AngularJS_logo.svg.png",
+			img: imgPath + "angular.png",
 			url: "https://angularjs.org/",
 		},
 		{ 
 			name: "jQuery",
 			desc: "",
-			img: "http://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg",
+			img: imgPath + "jquery.png",
 			url: "https://jquery.com/",
 		},
 		{ 
 			name: "Git",
 			desc: "",
-			img: "http://blog.x-aeon.com/wp-content/uploads/2011/11/Git-Logo-2Color-910x198.png",
+			img: imgPath + "git.png",
 			url: "http://git-scm.com/",
 		},
 		{ 
 			name: "DevExpress",
 			desc: "",
-			img: "http://crackha.com/wp-content/uploads/DevExpress.jpg",
+			img: imgPath + "devexpress.png",
 			url: "https://www.devexpress.com/",
 		},
 		{ 
 			name: "Visual Studio",
 			desc: "",
-			img: "http://i.imgur.com/YqTqq.png",
+			img: imgPath + "vs.png",
 			url: "https://www.visualstudio.com/",
 		},
 		{ 
 			name: "Intellij IDEA",
 			desc: "",
-			img: "http://upload.wikimedia.org/wikipedia/commons/7/77/Logo_intellij_idea.gif",
+			img: imgPath + "intellij.png",
 			url: "https://www.jetbrains.com/idea/",
 		},
 		
