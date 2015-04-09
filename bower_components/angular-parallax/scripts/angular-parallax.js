@@ -40,7 +40,9 @@ angular.module('angular-parallax', [
         if ($window.innerWidth > 768) {
           var calcValY = (elem.prop('offsetTop') - $window.pageYOffset) * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
           // horizontal positioning
-          elem.css('background-position', "0px " + calcValY + "px");
+
+          if (calcValY < 565)
+            elem.css('background-position', "0px " + calcValY + "px");
         }
       };
 
