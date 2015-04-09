@@ -60,15 +60,6 @@ app.controller('mainCtrl', ['$scope', '$timeout', function($scope, $timeout){
 			img: imgPath + "intellij.png",
 			url: "https://www.jetbrains.com/idea/",
 		},
-		
-		// { 
-		// 	name: "HTML CSS JS",
-		// 	desc: "",
-		// 	img: "http://www.seanhelvey.com/wp-content/uploads/2014/08/html5-css-javascript-logos.png",
-		// 	url: "http://pl.wikipedia.org/wiki/HTML5",
-		// },
-		
-		//vs devexpress
 	]
 
 	$(document).ready(function() {
