@@ -19,6 +19,10 @@
 	margin-right: auto;*/
 }
 
-.fullHeight {
-	height: 100%;
+.ng-invalid.ng-touched {
+	background-color: #FFDDDF;
+}
+
+.ng-valid.ng-touched {
+	background-color: #DBFFE0;
 }
