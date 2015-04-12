@@ -1,4 +1,4 @@
-app.controller('mainCtrl', ['$scope', '$timeout', function($scope, $timeout){
+app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $timeout, $http){
 	$scope.year = new Date().getFullYear();
 	$scope.introTextShowed = true;
 
@@ -71,4 +71,14 @@ app.controller('mainCtrl', ['$scope', '$timeout', function($scope, $timeout){
 			}, 300);
 		}, 300);
 	});
+
+	$scope.sendMail = function(mail) {
+		$http.post('/sendmail', mail).
+		  success(function(data, status, headers, config) {
+		    
+		  }).
+		  error(function(data, status, headers, config) {
+		    
+		  });
+	};
 }]);
