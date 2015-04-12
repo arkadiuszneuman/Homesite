@@ -72,13 +72,26 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		}, 300);
 	});
 
+	$scope.alert = {};
+
 	$scope.sendMail = function(mail) {
 		$http.post('/sendmail', mail).
 		  success(function(data, status, headers, config) {
-		    
+		  	if (data.success) {
+				$scope.alert.message = "Wiadomość została wysłana poprawnie.";
+				$scope.alert.type = "success";
+				$scope.msg = {};
+		  	} else {
+		  		$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
+				$scope.alert.type = "danger";
+		  	}
 		  }).
 		  error(function(data, status, headers, config) {
-		    
+		    $scope.alert.message = "Błąd podczas wysyłania wiadomości.";
+			$scope.alert.type = "danger";
+			console.log(data);
+		  }).then(function() {
+		  	$scope.alert.visible = true;
 		  });
 	};
 }]);

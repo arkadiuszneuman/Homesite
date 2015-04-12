@@ -32,6 +32,8 @@
     <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
     <script src='/bower_components/angular-parallax/scripts/angular-parallax.js'></script>
     <script src='/bower_components/scroll-animate-directive/src/scroll-animate-directive.js'></script>
+    <script src='/bower_components/angular-bootstrap/ui-bootstrap.min.js'></script>
+    <script src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
     <script src="/js/common.js"></script>
     <script src="/js/config/routing.js"></script>
     <script src="/js/directives/directives.js"></script>
@@ -244,6 +246,9 @@
                             </div>
                         </div>
                     </form>
+                    <div class="alert">
+                        <alert type="{{alert.type}}" close="alert.visible = false" ng-show="alert.visible">{{alert.message}}</alert>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,1 +1,1 @@
-var app = angular.module('SowaHome', ['ngRoute', 'ngAnimate', 'angular-parallax', 'scroll-animate-directive']);
+var app = angular.module('SowaHome', ['ngRoute', 'ngAnimate', 'angular-parallax', 'scroll-animate-directive', 'ui.bootstrap']);

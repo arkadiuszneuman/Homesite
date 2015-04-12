@@ -1,4 +1,5 @@
 var express = require('express');
+var nodemailer = require('nodemailer');
 var app = express();
 
 app.use("/bower_components", express.static(__dirname + '/bower_components'));
@@ -15,12 +16,40 @@ app.get('/', function (req, res) {
 });
 
 app.post('/sendmail', function(req, res) {
-    var name = req.body.name;
+	var connectionInfo = require('./mailconnectioninfo.json');
 
-    console.log(name);
+	var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+	    auth: {
+	        user: connectionInfo.from,
+	        pass: connectionInfo.credentialsPass
+	    }
+	});
+
+	var mailOptions = {
+	    from: connectionInfo.from, // sender address
+	    to: 'arkadiusz.neuman@gmail.com', // list of receivers
+	    subject: 'Wiadomość z ArkadiuszNeumanHomesite', // Subject line
+	    text: 'Imię: ' + req.body.name + '\r\n'+
+	    'Mail: ' + req.body.mail + '\r\n' +
+	    'Wiadomość: ' + req.body.message, // plaintext body
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
+		var response = {};
+
+	    if(error){
+	        console.log(error);
+	        response.success = false;
+	        response.message = error;
+	    }else{
+	        console.log('Message sent: ' + info.response);
+	        response.success = true;
+	    }
+
+	    res.end(JSON.stringify(response));
+	});
 });
-
-app.post('/sendMail')
 
 var server = app.listen(process.env.PORT || 3000, function () {
 
