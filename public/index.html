@@ -25,6 +25,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link href="/bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css">
     <link href="/css/site2.css" rel="stylesheet" type="text/css">
 
     <script src="/bower_components/angular/angular.min.js"></script>
@@ -34,6 +35,9 @@
     <script src='/bower_components/scroll-animate-directive/src/scroll-animate-directive.js'></script>
     <script src='/bower_components/angular-bootstrap/ui-bootstrap.min.js'></script>
     <script src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+    <script src="bower_components/ladda/js/spin.js"></script>
+    <script src="bower_components/ladda/js/ladda.js"></script>
+    <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/config/routing.js"></script>
     <script src="/js/directives/directives.js"></script>
@@ -242,7 +246,8 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl" ng-disabled="sentMessage.$invalid" ng-click="sendMail(msg)">Wyślij wiadomość</button>
+                                <button type="submit" class="btn btn-xl" ng-disabled="sentMessage.$invalid"
+                                ladda="sendingMail" data-style="expand-left" ng-click="sendMail(msg)">Wyślij wiadomość</button>
                             </div>
                         </div>
                     </form>

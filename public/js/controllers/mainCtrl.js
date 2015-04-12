@@ -75,6 +75,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 	$scope.alert = {};
 
 	$scope.sendMail = function(mail) {
+		$scope.sendingMail = true;
 		$http.post('/sendmail', mail).
 		  success(function(data, status, headers, config) {
 		  	if (data.success) {
@@ -92,6 +93,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 			console.log(data);
 		  }).then(function() {
 		  	$scope.alert.visible = true;
+			$scope.sendingMail = false;
 		  });
 	};
 }]);
