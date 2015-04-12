@@ -16,18 +16,28 @@ app.get('/', function (req, res) {
 });
 
 app.post('/sendmail', function(req, res) {
-	var connectionInfo = require('./mailconnectioninfo.json');
+
+	var connectionInfo;
+
+	try {
+		 connectionInfo = require('./mailconnectioninfo.json');
+	}
+	catch (e) {
+	}
+
+	var from = process.env.from || connectionInfo.from;
+	var pass = process.env.credentialsPass || connectionInfo.credentialsPass;
 
 	var transporter = nodemailer.createTransport({
     service: 'Gmail',
 	    auth: {
-	        user: connectionInfo.from,
-	        pass: connectionInfo.credentialsPass
+	        user: from,
+	        pass: pass
 	    }
 	});
 
 	var mailOptions = {
-	    from: connectionInfo.from, // sender address
+	    from: from, // sender address
 	    to: 'arkadiusz.neuman@gmail.com', // list of receivers
 	    subject: 'Wiadomość z ArkadiuszNeumanHomesite', // Subject line
 	    text: 'Imię: ' + req.body.name + '\r\n'+
