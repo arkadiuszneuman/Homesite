@@ -34,7 +34,7 @@ app.post('/sendmail', function(req, res) {
 	        user: from,
 	        pass: pass
 	    }
-	});
+	})
 
 	var mailOptions = {
 	    from: from, // sender address

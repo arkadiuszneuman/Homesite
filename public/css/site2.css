@@ -13,10 +13,46 @@
 
 .portfolio-img {
 	background-color: #fff;
-	/*height: 100%;*/
-/*	display: block;
-	margin-left: auto;
-	margin-right: auto;*/
+}
+
+.anim.ng-hide{
+	display: block!important;
+	visibility: hidden;
+}
+
+.anim1.ng-hide-remove {
+	-webkit-animation: fadeInLeft 1s;
+	        animation: fadeInLeft 1s;
+}
+
+.anim2.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+	         opacity: 0;
+}
+
+.anim3.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.3s;
+	        animation-delay: 0.3s;
+	        opacity: 0;
+}
+
+.anim4.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.4s;
+	        animation-delay: 0.4s;
+	        opacity: 0;
 }
 
 .ng-invalid.ng-touched {

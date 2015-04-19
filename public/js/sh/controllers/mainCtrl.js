@@ -96,4 +96,14 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 			$scope.sendingMail = false;
 		  });
 	};
+
+	$scope.getAnimClass = function($index) {
+		if ($index % 3 == 0) {
+			return "anim anim1";
+		} else if ($index % 3 == 1) {
+			return "anim anim2";
+		} else if ($index % 3 == 2) {
+			return "anim anim3";
+		}
+	}
 }]);

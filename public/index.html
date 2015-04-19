@@ -95,7 +95,7 @@
     </nav>
 
     <!-- Header -->
-    <header parallax-background parallax-ratio="-0.7">
+    <header>
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading animated" ng-class="headingAnim">Miło mi Cię poznać</div>
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
+                <div class="col-md-4" ng-class="getAnimClass(0)" ani-view>
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-windows fa-stack-1x fa-inverse"></i>
@@ -158,7 +158,7 @@
                     <h4 class="service-heading">Aplikacje desktopowe</h4>
                     <p class="text-muted">Tworzenie aplikacji desktopowych dla systemu operacyjnego Windows</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" ng-class="getAnimClass(1)" ani-view>
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-at fa-stack-1x fa-inverse"></i>
@@ -166,7 +166,7 @@
                     <h4 class="service-heading">Aplikacje webowe</h4>
                     <p class="text-muted">Tworzenie stron internetowych i aplikacji webowych</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" ng-class="getAnimClass(2)" ani-view>
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-android fa-stack-1x fa-inverse"></i>
@@ -193,9 +193,9 @@
                     <h3 class="section-subheading text-muted">Technologie, które wykorzystuję.</h3>
                 </div>
             </div>
-            <div class="row fullHeight">
-                <div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="technology in technologies">
-                    <a href="{{::technology.url}}" target="_blank" class="portfolio-link portfolio-img ">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item" ng-class="getAnimClass($index)" ani-view ng-repeat="technology in technologies">
+                    <a href="{{::technology.url}}" target="_blank" class="portfolio-link portfolio-img">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-sign-out fa-3x"></i>
@@ -207,6 +207,7 @@
                         <h4>{{::technology.name}}</h4>
                         <p class="text-muted">{{::technology.desc}}</p>
                     </div>
+                    
                 </div>
             </div>
             <div class="row">

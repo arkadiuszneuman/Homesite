@@ -81,24 +81,32 @@ angular.module('scroll-animate-directive', [])
             replace: true,
             template: '<div ng-transclude ng-show=\'show\'></div>',
             scope: {
-                show: '@',
+                show: '@'
             },
             link: function(scope, element, attrs) {
 
                 angular.element($window).bind('scroll', function() {
                     var position = scope.getPosition(element);
-                    var offset = scope.getScrollOffsets($window);
-                    var viewport = scope.getViewPortSize($window);
-                    var coverage = {
-                        x: parseInt(viewport.x + offset.x),
-                        y: parseInt(viewport.y + offset.y)
-                    }
-                    if (coverage.y >= position.y && coverage.x >= position.x) {
-                        scope.show = true;
-                    } else {
-                        scope.show = false;
-                    }
-                    scope.$apply();
+                    console.log(position.y);
+                        var offset = scope.getScrollOffsets($window);
+                        var viewport = scope.getViewPortSize($window);
+                        var coverage = {
+                            x: parseInt(viewport.x + offset.x),
+                            y: parseInt(viewport.y + offset.y)
+                        }
+
+                        if (coverage.y >= position.y && coverage.x >= position.x) {
+                            if (scope.prevShowState == false) {
+                                scope.show = false;
+                                scope.$apply();
+                            }
+                            scope.show = true;
+                            scope.prevShowState = true;
+                        } else {
+                            scope.prevShowState = false;
+                        }
+                        
+                        scope.$apply();
                 });
             }
         };
