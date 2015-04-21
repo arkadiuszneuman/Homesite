@@ -92,7 +92,7 @@ angular.module('scroll-animate-directive', [])
                     var viewport = scope.getViewPortSize($window);
                     var coverage = {
                         x: parseInt(viewport.x + offset.x),
-                        y: parseInt(viewport.y + offste.y)
+                        y: parseInt(viewport.y + offset.y)
                     }
 
                     if (angular.isUndefined(scope.showed)) {
