@@ -1,66 +1,64 @@
-.row { /*bootstrap bug*/
-	margin: 0; 
-	padding: 0; 
-} 
 
-#welcome {
-	/*background: linear-gradient(to top right, #B7FFEF, #D6FF9C);*/
-	background-position: 0 0;
-	background-size: 100% 400px;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
-	padding: 5% 0%;
+.animated {
+	opacity: 0;
 }
 
-#img {
-	width: 100%;
-	height: 100%;
-	position:absolute;
-	left:0;
-	z-index: -1;
+.show {
+	opacity: 1;
 }
 
-#info {
-	background-color: #DA6565;
-
-	width: 100%;
-	height: 100%;
+.scrollButton {
+	margin-top: 20px;
 }
 
-.screenContent {
-	background-color: white;
-	padding: 5% 0;
-	/*height: 100%;*/
-	width: 100%;
-
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+.portfolio-img {
+	background-color: #fff;
 }
 
-#face {
-	border-radius: 50%;
+.anim.ng-hide{
+	display: block!important;
+	visibility: hidden;
 }
 
-
-body {
-	font-family: 'Roboto', sans-serif;
+.anim1.ng-hide-remove {
+	-webkit-animation: fadeInLeft 1s;
+	        animation: fadeInLeft 1s;
 }
 
-h1 {
-	color: #009A65;
+.anim2.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+	         opacity: 0;
 }
 
-@media(max-width:767px){
-	h1{font-size: 10px;}
-
+.anim3.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.3s;
+	        animation-delay: 0.3s;
+	        opacity: 0;
 }
-@media(min-width:768px){
-	h1{font-size: 30px;}
-}
-@media(min-width:992px){
 
+.anim4.ng-hide-remove {
+	-webkit-animation: fadeInLeft;
+	        animation: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay: 0.4s;
+	        animation-delay: 0.4s;
+	        opacity: 0;
 }
-@media(min-width:1200px){
 
+.ng-invalid.ng-touched {
+	background-color: #FFDDDF;
+}
+
+.ng-valid.ng-touched {
+	background-color: #DBFFE0;
 }
