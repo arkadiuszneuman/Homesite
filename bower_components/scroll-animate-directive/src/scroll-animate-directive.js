@@ -87,18 +87,20 @@ angular.module('scroll-animate-directive', [])
 
                 angular.element($window).bind('scroll', function() {
                     var position = scope.getPosition(element);
-                    console.log(position.y);
-                        var offset = scope.getScrollOffsets($window);
-                        var viewport = scope.getViewPortSize($window);
-                        var coverage = {
-                            x: parseInt(viewport.x + offset.x),
-                            y: parseInt(viewport.y + offset.y)
-                        }
 
+                    var offset = scope.getScrollOffsets($window);
+                    var viewport = scope.getViewPortSize($window);
+                    var coverage = {
+                        x: parseInt(viewport.x + offset.x),
+                        y: parseInt(viewport.y + offste.y)
+                    }
+
+                    if (angular.isUndefined(scope.showed)) {
                         if (coverage.y >= position.y && coverage.x >= position.x) {
-                            if (scope.prevShowState == false) {
+                            if (scope.prevShowState === false) {
                                 scope.show = false;
                                 scope.$apply();
+                                scope.showed = true;
                             }
                             scope.show = true;
                             scope.prevShowState = true;
@@ -107,6 +109,7 @@ angular.module('scroll-animate-directive', [])
                         }
                         
                         scope.$apply();
+                    }
                 });
             }
         };
