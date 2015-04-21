@@ -15,10 +15,10 @@
 	background-color: #fff;
 }
 
-.anim.ng-hide{
+/*.anim.ng-hide{
 	display: block!important;
 	visibility: hidden;
-}
+}*/
 
 .anim1.ng-hide-remove {
 	-webkit-animation: fadeInLeft 1s;
