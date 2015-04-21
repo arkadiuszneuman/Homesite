@@ -293,6 +293,11 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
+@media (max-width: 768px) {
+  section h2.section-heading {
+    font-size: 30px;
+  }
+}
 .service-heading {
   margin: 15px 0;
   text-transform: none;
