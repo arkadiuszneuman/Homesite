@@ -21,16 +21,24 @@ module.exports = function(grunt) {
         }
       }
     },
+    less: {
+      development: {
+        files: {
+          "public/css/agency.css": "public/less/agency.less"
+        }
+      }
+    },
     watch: {
-      files: ['<%= concat.dist.src %>', 'gruntfile.js'],
-      tasks: ['concat', 'uglify']
+      files: ['<%= concat.dist.src %>', 'gruntfile.js', 'public/less/*.less'],
+      tasks: ['concat', 'uglify', 'less']
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'less']);
 
 };
