@@ -85,6 +85,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		  	} else {
 		  		$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
 					$scope.alert.type = "danger";
+					console.log(data.message);
 		  	}
 		  }).
 		  error(function(data, status, headers, config) {
