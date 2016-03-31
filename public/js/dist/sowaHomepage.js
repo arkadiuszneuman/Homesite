@@ -23,56 +23,56 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 	var imgPath = "/img/technologies/";
 
 	$scope.technologies = [
-		{ 
+		{
 			name: ".NET Framework",
 			desc: "",
 			img: imgPath + "netframework.png",
 			url: "http://pl.wikipedia.org/wiki/.NET_Framework",
 		},
-		{ 
+		{
 			name: "ASP.NET MVC",
 			desc: "",
 			img: imgPath + "asp.png",
 			url: "http://www.asp.net/mvc",
 		}
 		,
-		{ 
+		{
 			name: "NodeJS",
 			desc: "",
 			img: imgPath + "node.png",
 			url: "https://nodejs.org/",
 		},
-		{ 
+		{
 			name: "AngularJS",
 			desc: "",
 			img: imgPath + "angular.png",
 			url: "https://angularjs.org/",
 		},
-		{ 
+		{
 			name: "jQuery",
 			desc: "",
 			img: imgPath + "jquery.png",
 			url: "https://jquery.com/",
 		},
-		{ 
+		{
 			name: "Git",
 			desc: "",
 			img: imgPath + "git.png",
 			url: "http://git-scm.com/",
 		},
-		{ 
+		{
 			name: "DevExpress",
 			desc: "",
 			img: imgPath + "devexpress.png",
 			url: "https://www.devexpress.com/",
 		},
-		{ 
+		{
 			name: "Visual Studio",
 			desc: "",
 			img: imgPath + "vs.png",
 			url: "https://www.visualstudio.com/",
 		},
-		{ 
+		{
 			name: "Intellij IDEA",
 			desc: "",
 			img: imgPath + "intellij.png",
@@ -97,21 +97,22 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		$http.post('/sendmail', mail).
 		  success(function(data, status, headers, config) {
 		  	if (data.success) {
-				$scope.alert.message = "Wiadomość została wysłana poprawnie.";
-				$scope.alert.type = "success";
-				$scope.msg = {};
+					$scope.alert.message = "Wiadomość została wysłana poprawnie.";
+					$scope.alert.type = "success";
+					$scope.msg = {};
 		  	} else {
 		  		$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
-				$scope.alert.type = "danger";
+					$scope.alert.type = "danger";
+					console.log(data.message);
 		  	}
 		  }).
 		  error(function(data, status, headers, config) {
-		    $scope.alert.message = "Błąd podczas wysyłania wiadomości.";
-			$scope.alert.type = "danger";
+				$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
+				$scope.alert.type = "danger";
 			console.log(data);
 		  }).then(function() {
 		  	$scope.alert.visible = true;
-			$scope.sendingMail = false;
+				$scope.sendingMail = false;
 		  });
 	};
 
@@ -125,6 +126,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		}
 	}
 }]);
+
 ///////////////////////////////////////
 app.directive('centerV', ['$window', function($window){
 	var elem;
