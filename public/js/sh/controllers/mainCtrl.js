@@ -91,7 +91,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		  error(function(data, status, headers, config) {
 				$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
 				$scope.alert.type = "danger";
-			console.log(data);
+				console.log(data);
 		  }).then(function() {
 		  	$scope.alert.visible = true;
 				$scope.sendingMail = false;
