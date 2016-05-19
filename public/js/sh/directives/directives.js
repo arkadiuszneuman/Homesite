@@ -9,7 +9,7 @@ app.directive('centerV', ['$window', function($window){
 
 	return {
 		 restrict: 'A',
-		 link: function($scope, iElm, iAttrs, controller)
+		 link: function($scope, iElm, iAttrs, controller) {
 		 		elem = iElm;
 				resize();
 		}
