@@ -1,4 +1,5 @@
 var express = require('express');
+require('newrelic');
 var nodemailer = require('nodemailer');
 var app = express();
 
