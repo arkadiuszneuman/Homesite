@@ -35,13 +35,12 @@
     <script src="/bower_components/angular-route/angular-route.min.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
     <script src='/bower_components/angular-parallax/scripts/angular-parallax.js'></script>
-    <script src='/bower_components/scroll-animate-directive/src/scroll-animate-directive.js'></script>
     <script src='/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
     <script src='/bower_components/angular-bootstrap/ui-bootstrap.min.js'></script>
     <script src='/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
-    <script src="bower_components/ladda/js/spin.js"></script>
-    <script src="bower_components/ladda/js/ladda.js"></script>
-    <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+    <script src="/bower_components/ladda/js/spin.js"></script>
+    <script src="/bower_components/ladda/js/ladda.js"></script>
+    <script src="/bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
 
     <script src="/js/dist/sowaHomepage.min.js"></script>
 
@@ -132,7 +131,7 @@
                     <p class="large text-muted">Cześć! Nazywam się Arek i zawodowo programowaniem zajmuję się już od
                     {{::year-2011}} lat. Niniejsza strona jest niejako zebraniem w całość tego, czym się zajmuję.<br>
                     Zapraszam do kontaktu.
-                </div>                
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -152,7 +151,7 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4" ng-class="getAnimClass(0)" ani-view>
+                <div class="col-md-4" ani-view="1">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-windows fa-stack-1x fa-inverse"></i>
@@ -160,7 +159,7 @@
                     <h4 class="service-heading">Aplikacje desktopowe</h4>
                     <p class="text-muted">Tworzenie aplikacji desktopowych dla systemu operacyjnego Windows</p>
                 </div>
-                <div class="col-md-4" ng-class="getAnimClass(1)" ani-view>
+                <div class="col-md-4" ani-view="2">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-at fa-stack-1x fa-inverse"></i>
@@ -168,7 +167,7 @@
                     <h4 class="service-heading">Aplikacje webowe</h4>
                     <p class="text-muted">Tworzenie stron internetowych i aplikacji webowych</p>
                 </div>
-                <div class="col-md-4" ng-class="getAnimClass(2)" ani-view>
+                <div class="col-md-4" ani-view="3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-android fa-stack-1x fa-inverse"></i>
@@ -196,7 +195,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item" ng-class="getAnimClass($index)" ani-view ng-repeat="technology in technologies">
+                <div class="col-md-4 col-sm-6 portfolio-item" ani-view="($index % 3) + 1" ng-repeat="technology in technologies">
                     <a href="{{::technology.url}}" target="_blank" class="portfolio-link portfolio-img">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -209,7 +208,7 @@
                         <h4>{{::technology.name}}</h4>
                         <p class="text-muted">{{::technology.desc}}</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
@@ -238,7 +237,7 @@
                                     required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Twój adres e-mail *" id="email" required 
+                                    <input type="email" class="form-control" placeholder="Twój adres e-mail *" id="email" required
                                     ng-model="msg.mail">
                                 </div>
                             </div>
