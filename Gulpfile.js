@@ -34,6 +34,8 @@ gulp.task('js', function () {
         .pipe(gulp.dest('public/js/dist'));
 });
 
+gulp.task('default', ['js']);
+
 gulp.task('watch', function () {
     gulp.watch(['public/js/sh/**/*.js'], ['js-dev']);
 });

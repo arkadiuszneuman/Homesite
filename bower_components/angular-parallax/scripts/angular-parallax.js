@@ -9,15 +9,12 @@ angular.module('angular-parallax', [
       parallaxVerticalOffset: '@',
       parallaxHorizontalOffset: '@',
     },
-    link: function($scope, elem, $attrs) {
+    link: function($scope, elem, attrs) {
       var setPosition = function () {
-        // horizontal positioning
-        elem.css('left', $scope.parallaxHorizontalOffset + "px");
-
         var calcValY = $window.pageYOffset * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
         if (calcValY <= $window.innerHeight) {
           var topVal = (calcValY < $scope.parallaxVerticalOffset ? $scope.parallaxVerticalOffset : calcValY);
-          elem.css('top', topVal + "px");
+          elem.css('transform','translate(' + $scope.parallaxHorizontalOffset + 'px, ' +topVal+ 'px)');
         }
       };
 
@@ -37,13 +34,9 @@ angular.module('angular-parallax', [
     },
     link: function($scope, elem, attrs) {
       var setPosition = function () {
-        if ($window.innerWidth > 768) {
-          var calcValY = (elem.prop('offsetTop') - $window.pageYOffset) * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
-          // horizontal positioning
-
-          if (calcValY < 565)
-            elem.css('background-position', "0px " + calcValY + "px");
-        }
+        var calcValY = (elem.prop('offsetTop') - $window.pageYOffset) * ($scope.parallaxRatio ? $scope.parallaxRatio : 1.1 );
+        // horizontal positioning
+        elem.css('background-position', "50% " + calcValY + "px");
       };
 
       // set our initial position - fixes webkit background render bug

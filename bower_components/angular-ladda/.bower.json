@@ -37,8 +37,7 @@
     "tag": "0.2.2",
     "commit": "1a0aa65b2fecc277044753a0278ce768ee226c5b"
   },
-  "_source": "git://github.com/remotty/angular-ladda.git",
+  "_source": "https://github.com/remotty/angular-ladda.git",
   "_target": "~0.2.2",
-  "_originalSource": "angular-ladda",
-  "_direct": true
+  "_originalSource": "angular-ladda"
 }

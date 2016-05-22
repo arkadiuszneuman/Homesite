@@ -29,3 +29,4 @@ node_modules
 
 mailconnectioninfo.json
 public/js/dist
+bower_components

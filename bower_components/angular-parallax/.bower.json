@@ -1,6 +1,6 @@
 {
   "name": "angular-parallax",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/brettdonohoo/angular-parallax",
   "authors": [
     "Brett Donohoo <brett.donohoo@gmail.com>"
@@ -20,14 +20,13 @@
     "test",
     "tests"
   ],
-  "_release": "0.0.1",
+  "_release": "0.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.1",
-    "commit": "f11d0592fa6ab2dab19bd3c7943163a5c586f319"
+    "tag": "v0.0.2",
+    "commit": "b4a982efd0b4efdfc4a597297e6d9410cbfb2227"
   },
-  "_source": "git://github.com/brettdonohoo/angular-parallax.git",
+  "_source": "https://github.com/brettdonohoo/angular-parallax.git",
   "_target": "~0.0.1",
-  "_originalSource": "angular-parallax",
-  "_direct": true
+  "_originalSource": "angular-parallax"
 }
