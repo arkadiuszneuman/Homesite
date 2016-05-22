@@ -62,7 +62,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 		},
 	]
 
-	$(document).ready(function() {
+	angular.element(document).ready(function() {
 		$scope.headingAnim = "fadeInLeft";
 		$timeout(function() {
 			$scope.leadAnim = "fadeInRight show";
@@ -82,6 +82,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 					$scope.alert.message = "Wiadomość została wysłana poprawnie.";
 					$scope.alert.type = "success";
 					$scope.msg = {};
+					$scope.sentMessage.$setUntouched();
 		  	} else {
 		  		$scope.alert.message = "Błąd podczas wysyłania wiadomości.";
 					$scope.alert.type = "danger";
@@ -97,14 +98,4 @@ app.controller('mainCtrl', ['$scope', '$timeout', '$http', function($scope, $tim
 				$scope.sendingMail = false;
 		  });
 	};
-
-	$scope.getAnimClass = function($index) {
-		if ($index % 3 == 0) {
-			return "anim anim1";
-		} else if ($index % 3 == 1) {
-			return "anim anim2";
-		} else if ($index % 3 == 2) {
-			return "anim anim3";
-		}
-	}
 }]);

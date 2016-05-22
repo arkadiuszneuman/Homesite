@@ -25,6 +25,7 @@
 	-webkit-animation-delay: 0.3s;
 	animation-delay: 0.3s;
 }
+
 .ng-invalid.ng-touched {
 	background-color: #FFDDDF;
 }
